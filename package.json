@@ -1,0 +1,14 @@
+{
+    "name": "Drata Mock API Test (JEST)",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "axios": "^0.26.1",
+        "jest": "^27.5.1",
+        "jest-mock": "^27.5.1",
+        "moxios": "^0.4.0"
+    }
+}
