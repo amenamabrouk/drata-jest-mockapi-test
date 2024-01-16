@@ -21,7 +21,9 @@ describe('getUserData', () => {
   // Test case for successfully fetching data from GitHub API (200 OK)
   it('handles a successful response (200 OK)', async () => {
     const mockData = { login: 'testuser', id: 123 }
-    // What to do when we get a call 
+    // This code uses `moxios` to intercept and respond to an HTTP request, 
+    // logging the request details and asserting that it matches the expected URL, method, 
+    // and authorization header before responding with a predefined mock data. 
     moxios.wait(function () {
         let request = moxios.requests.mostRecent()
         console.log(request)
@@ -67,7 +69,7 @@ describe('getUserData', () => {
 
   // Test case for handling a server error response (500)
   it('handles a server error response (500)', async () => {
-
+    // This defines an `errorResp` object representing a simulated server error response with a status code of 500 and a response containing a message indicating "server error".
     const errorResp = {
         status: 500,
         response: { message: 'server error' }
